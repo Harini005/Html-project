@@ -3,13 +3,14 @@
         <title>Lightning Out</title>
         <script>
             fetch(
-                    "https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/services/data/v64.0/sobjects",
+                    "https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/services/oauth2/lightningoutsingleaccess",
                     {
-                        method: "GET",
+                        method: "POST",
                         headers: {
                             "Content-Type": "application/x-www-form-urlencoded",
                             "Authorization" : "Bearer 00DNS00000GSjLx!AQEAQIYbYgI.wzpa8z81JMiGxqftqIKlwquvr3Stw__QZpPsCsYDizY66659HYukY4yUO7OIdVOS4jyADrObXX.vdZYCyr3O"
                         },
+                        body:"access_token=00DNS00000GSjLx!AQEAQIYbYgI.wzpa8z81JMiGxqftqIKlwquvr3Stw__QZpPsCsYDizY66659HYukY4yUO7OIdVOS4jyADrObXX.vdZYCyr3O, lightning_out_app_id=1UsNS0000000B8L0AU"
                     },
                 )
                     .then((response) => {
