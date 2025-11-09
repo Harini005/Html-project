@@ -1,23 +1,8 @@
 <!-- Host page context-->
 <body>
-  <!--Lightning Out 2.0 JS library -->
-  <script
-    type="text/javascript"
-    async=""
-src="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js" components="c-stopwatch">
+ <script type="text/javascript" async="" src="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"></script>
 
-     $Lightning.use("c:stprWatch", function() {
-      $Lightning.createComponent(
-          "c:stopWatch",
-          {},
-          "lightning",
-          function(cmp) {
-              console.log("Lightning component loaded!");
-          }
-      );
-  </script>
-  <!-- Lightning Out 2.0 web component: base configuration -->
- <lightning-out-application frontdoor-url="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/secur/frontdoor.jsp?otp=00DNS00000GSjLx%21AQEAQHsI86q9gm8zYrRFWAAOekp5s8p.iLNJ5FRg6ERBJRaXPTCK3XmfNekmYX.3JOOzy4WhkFp8UpZ89_cFrH8XfGhPYD2z&startURL=lightning%2Fsetup%2FManageUsers%2Fhome&cshc=S00000IuAgfS00000GSjLx components="c-stopwatch"></lightning-out-application>
-  <c-stopwatch></c-stopwatch>
-  <p>Hello 123</p>
+<lightning-out-application components="c-stopwatch"></lightning-out-application>
+<c-stopwatch></c-stopwatch>
+  <p>Hello world!!!</p>
 </body>
