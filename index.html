@@ -1,11 +1,20 @@
 <!-- Host page context-->
-<head>
- <script type="text/javascript" async="" src="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"></script>
-</head>
-<body>
- 
-
-<lightning-out-application components="c-stopwatch"></lightning-out-application>
-<c-stopwatch></c-stopwatch>
-  <p>Hello world!!!</p>
-</body>
+ <lightning-out-application
+frontdoor-url="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/secur/frontdoor.jsp?otp=00DNS00000GSjLx%21AQEAQFylU.nAB0SvG2bMDiswlfqLhl.hMIXgICtJLbCdNem.WN83BlQWRmdSI55SQuQYPooo6cGiEA2d2VGqsQWr5o4tHmY3&startURL=lightning%2Fsetup%2FManageUsers%2Fhome&cshc=S00000IuAgfS00000GSjLx"
+components="c-stopwatch"
+  >
+  </lightning-out-application>
+  <!-- Lightning Out 2.0 web component with optional styling hooks -->
+  <c-stopwatch>
+    <!-- shadow DOM begin -->
+    <iframe>
+      <html>
+        <!-- Salesforce context -->
+        <body>
+          <!-- Lightning web component -->
+           <c-stopwatch></c-stopwatch>
+        </body>
+      </html>
+    </iframe>
+    <!-- shadow DOM end -->
+  </c-stopwatch>
