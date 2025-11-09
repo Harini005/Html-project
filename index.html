@@ -1,31 +1,26 @@
-<html>
-    <head>
-        <title>Lightning Out</title>
-        <script>
-            fetch(
-                    "https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/services/oauth2/lightningoutsingleaccess",
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/x-www-form-urlencoded",
-                            "Authorization" : "Bearer 00DNS00000GSjLx!AQEAQIYbYgI.wzpa8z81JMiGxqftqIKlwquvr3Stw__QZpPsCsYDizY66659HYukY4yUO7OIdVOS4jyADrObXX.vdZYCyr3O"
-                        },
-                        body:"access_token=00DNS00000GSjLx!AQEAQIYbYgI.wzpa8z81JMiGxqftqIKlwquvr3Stw__QZpPsCsYDizY66659HYukY4yUO7OIdVOS4jyADrObXX.vdZYCyr3O, lightning_out_app_id=1UsNS0000000B8L0AU"
-                    },
-                )
-                    .then((response) => {
-                        console.log("Status:", response.status);
-                        return response.json();
-                    })
-                    .then((data) => {
-                        console.log("Success:", data);
-                    })
-                    .catch((error) => {
-                        console.error("Error:", error);
-                    });
-        </script>
-    </head>
-    <body>
-        <p>Hello World 123</p>
-    </body>
-</html>
+<!-- Host page context-->
+<body>
+  <!--Lightning Out 2.0 JS library -->
+  <script
+    type="text/javascript"
+    async=""
+src="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"
+  ></script>
+  <!-- Lightning Out 2.0 web component: base configuration -->
+ <lightning-out-application frontdoor-url="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/secur/frontdoor.jsp?otp=00DNS00000GSjLx%21AQEAQHsI86q9gm8zYrRFWAAOekp5s8p.iLNJ5FRg6ERBJRaXPTCK3XmfNekmYX.3JOOzy4WhkFp8UpZ89_cFrH8XfGhPYD2z&startURL=lightning%2Fsetup%2FManageUsers%2Fhome&cshc=S00000IuAgfS00000GSjLx components="c-stopwatch"></lightning-out-application>
+
+  <!-- Lightning Out 2.0 web component with optional styling hooks -->
+  <c-my-lwc style="--custom-color: brown;">
+    <!-- shadow DOM begin -->
+    <iframe>
+      <html>
+        <!-- Salesforce context -->
+        <body>
+          <!-- Lightning web component -->
+          <c-stopwatch></c-stopwatch>
+        </body>
+      </html>
+    </iframe>
+    <!-- shadow DOM end -->
+  </c-my-lwc>
+</body>
