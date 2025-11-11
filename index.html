@@ -1,24 +1,25 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-    <title>LWC on External Site</title>
+
+<title>LWC on External Site</title>
+
 </head>
+
 <body>
 
-    <script 
-        type="text/javascript" 
-        async="" 
-        src="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js">
-    </script>
+ 
 
-    <lightning-out-application
-        
-        components="c-hello-world-exe"
-        frontdoor-url="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/secur/frontdoor.jsp?sid="00DNS00000GSjLx!AQEAQAA8605xgLNfdZdfCfrL8FlzKPYWs0Ylu9891vIL9w_JkbnM_jTtTWrWiBCucxbcM.bbKAWzhAFnwKPCW2FXFAkvzum1"
-    ></lightning-out-application>
+<script type="text/javascript" async="" src="https://globalpay--midev.sandbox.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"></script>
 
-    <c-hello-world-exe></c-hello-world-exe>
+ 
 
+<lightning-out-application components="c-gp-lightning-out-test" frontdoor-url="https://globalpay--midev.sandbox.my.salesforce.com/secur/frontdoor.jsp?sid="00D8N0000008gu3!ARQAQKi5IVLMR5tMS.J8nGCe9hbbHJN6nykGPaSa4YrkdQmXWWnUZ0wmzlzg6vODh8Qlb_BaoKk1pn4A9_Am8kkW6K0PDMef"></lightning-out-application>
 
-    </body>
+<c-gp-lightning-out-test></c-gp-lightning-out-test>
+
+</body>
+
 </html>
