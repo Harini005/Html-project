@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-<title>LWC on External Site</title>
-
+    <title>LWC on External Site</title>
 </head>
-
 <body>
 
-<script type="text/javascript" async="" src="https://globalpay--midev.sandbox.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js"></script>
+    <script 
+        type="text/javascript" 
+        async="" 
+        src="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/lightning/lightning.out.latest/index.iife.prod.js">
 
- 
+     fetch('https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/services/oauth2/token?cleint_id= &client_secret= &grant_type=client_credentials')
+     .then(result=>{
+      console.log(result);
+     })
+     .catch(error=>{
+      console.error(error);
+     })
+    </script>
 
-<lightning-out-application components="c-gp-lightning-out-test" frontdoor-url="https://globalpay--midev.sandbox.my.salesforce.com/secur/frontdoor.jsp?sid="00D8N0000008gu3!ARQAQKi5IVLMR5tMS.J8nGCe9hbbHJN6nykGPaSa4YrkdQmXWWnUZ0wmzlzg6vODh8Qlb_BaoKk1pn4A9_Am8kkW6K0PDMef"></lightning-out-application>
+    <lightning-out-application
+        id="lwc-app"
+        components="c-helloWorldExe"
+        frontdoor-url="https://orgfarm-5a49159da9-dev-ed.develop.my.salesforce.com/secur/frontdoor.jsp?otp=00DNS00000GSjLx%21AQEAQFylU.nAB0SvG2bMDiswlfqLhl.hMIXgICtJLbCdNem.WN83BlQWRmdSI55SQuQYPooo6cGiEA2d2VGqsQWr5o4tHmY3&startURL=lightning%2Fsetup%2FManageUsers%2Fhome&cshc=S00000IuAgfS00000GSjLx"
+    ></lightning-out-application>
 
-<c-gp-lightning-out-test></c-gp-lightning-out-test>
+    <c-hello-world-exe></c-hello-world-exe>
 
-</body>
 
+    </body>
 </html>
